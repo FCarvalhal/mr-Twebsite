@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+  background-color: #16123f;
+  font-family: "Muli", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  overflow-x: hidden;
+  margin 0;
+}
+
+.container {
+  display: inline-block;
+  width: 80vw;
+  }
+
+.panel {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 20vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px; 
+  position: relative;
+  transition: flex 0.7s ease-in;
+  border: 0.1px solid #fff;
+  box-shadow: 3px 3px grey;
+}
+
+.cithara, .quarteto {
+  background-position: center;
+}
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.panel h2 {
+  font-size: 20px;
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.panel.active {
+  background-position: center;
+  cursor: default;
+  flex: 5;
+  height: 75vh;
+  transition: ease-in 0.7s;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+.panel.active h2 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+  .container{
+    width: 90vw;
+  }
+  .panel h3 {
+    font-size: 15px;
+  }
+}
+
+.col {
+  position: relative;
+  background-color: #fff;
+  margin: 5px;
+  width: 5px;
+  height: 25px;
+  border-radius: 20%;
+  padding-left: 6px;
+  padding-top: 3px;
+}
+
+.row {
+  padding-left: 10px;
+}
+
+#quartetoSpotify {
+  opacity: 0;
+}
+
+.fb, .instagram, .spotify, .youtube {
+  position: absolute;
+  right: auto;
+}
+
+.cithara.active {
+  background:url(CitharaBanda.jpeg);
+  animation: chbg 15s infinite alternate;
+  background-size:cover
+}
+@keyframes chbg {
+  0% {
+    background:url(CitharaBanda.jpeg);
+  background-size:cover
+  }
+ 
+  100% {
+    background:url(CitharaBanda.jpeg);
+  background-size:cover
+  }
+}
